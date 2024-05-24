@@ -29,11 +29,6 @@ public class Main {
         banco.getClientes().add(cliente1);
         banco.getClientes().add(cliente2);
 
-        //Validar funcionamiento Taller clase 2
-        banco.agregarCliente(cliente1);
-        cliente1.abonarCuenta(1001, 1000);
-        banco.agregarCliente(cliente2);
-        cliente2.abonarCuenta(1003, 2000);
 
         // Imprimir información
         System.out.println(banco);

@@ -1,18 +1,19 @@
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class Banco implements ServicioClientes {
     private String nombre;
     private Domicilio domicilio;
     private String rfc;
     private String telefono;
-    private ArrayList<Cliente> clientes;
+    private TreeSet<Cliente> clientes; //Collecion cambiada a treeset
 
     public Banco(String nombre, Domicilio domicilio, String rfc, String telefono) {
         this.nombre = nombre;
         this.domicilio = domicilio;
         this.rfc = rfc;
         this.telefono = telefono;
-        this.clientes = new ArrayList<>();
+        this.clientes = new TreeSet<>();
     }
 
     public String getNombre() {
@@ -47,11 +48,11 @@ public class Banco implements ServicioClientes {
         this.telefono = telefono;
     }
 
-    public ArrayList<Cliente> getClientes() {
+    public TreeSet<Cliente> getClientes() {
         return clientes;
     }
 
-    public void setClientes(ArrayList<Cliente> clientes) {
+    public void setClientes(TreeSet<Cliente> clientes) {
         this.clientes = clientes;
     }
 

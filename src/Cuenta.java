@@ -1,4 +1,4 @@
-public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta> {
 
     protected int numero;
     protected String fechaApertura;
@@ -52,5 +52,10 @@ public abstract class Cuenta {
                 ", saldo=" + saldo +
                 ", fechaCancelacion='" + fechaCancelacion + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Cuenta cuenta) {
+        return Double.compare(this.saldo, cuenta.saldo);
     }
 }
